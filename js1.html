@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <title>
+            Js Crash Course
+                    </title>
+                    <script>
+                        function greet(){
+                          //JSON
+                          var student={
+                            name: "Thanushree Bhat K G",
+                            age: 18,
+                            marks:95,
+                            interests:["reading","coding"]
+                          }
+                          student[`place`] ="Mangalore"
+                          console.log(student)                 
+                          
+                            var cars =['benz','bmw','maruti','audi','ferrari','porsche']
+                            console.log(`Cars ${cars}`)
+                            var search=document.getElementById('search').value
+                            console.log(`User searched ${search}`)
+                            var result = cars.filter((car) => {
+                                return car == search}) // => is called fat arrow used to return
+                            console.log(`Filter result: ${result}`)
+                            var result= cars.map((car)=> {
+                                return car == search
+                            })
+                            console.log(`Map result :${result}`)
+
+                            //var result= cars.filter((car)=> car=search)
+                            // result.forEach((car)=>{
+                            //     var carTag= document.createElement('h1')
+                            // carTag.setAttribute("id",car)
+                            // carTag.innerHTML = car;
+                            // document.body.appendChild(carTag);
+                            // console.log('Not found')
+
+                            // })
+                            // cars.forEach((car)=>{
+                            //     if(car==search){
+                            //         console.log(car)
+                            //         var carTag= document.createElement('h1')
+                            // carTag.setAttribute("id",car)
+                            // carTag.innerHTML = car;
+                            // document.body.appendChild(carTag);
+                            //     }
+                            //     else{
+                            //         console.log("Not found")
+                            //     }
+                            //     console.log(car)
+                            // var carTag= document.createElement('h1')
+                            // carTag.setAttribute("id",car)
+                            // carTag.innerHTML = car;
+                            // document.body.appendChild(carTag);
+                        
+                    }
+                    </script>
+    </head>
+    <body >
+        <h1 id="title">Js Crash course</h1>
+        <input placeholder="enter car name" id="search" onchange="greet()">
+        
+    </body>
+</html>
