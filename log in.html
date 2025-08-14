@@ -1,0 +1,90 @@
+<html>
+    <head>
+        <title>LOGIN PAGE</title>
+    </head>
+    <script>
+                function printLog(){
+            var nameNode = document.getElementById("name");
+            console.log(nameNode.value)
+            var ageNode = document.getElementById("age");
+            console.log(ageNode.value)
+            var numberNode = document.getElementById("number");
+            console.log(numberNode.value)
+            var emailNode= document.getElementById("email")
+            console.log(emailNode.value)
+            var passwordNode= document.getElementById("password")
+            var password= passwordNode.value;
+            console.log(`Password ${password}`)
+            var genderNode= document.getElementById("gender")
+            console.log(genderNode.value)
+        }
+    </script>
+    <body>
+        <center>
+        <h1>Login to continue</h1>
+         <form style="
+            align-items: center;
+            background-color: rgb(178, 211, 238);
+            color: rgb(37, 36, 36);
+            padding: 20px;
+            width: 300px;
+            border-radius: 20px;">
+            
+            <table>
+                <tr>
+                    <td>
+            
+            <label for="name">Name:</label>
+            
+            <input type="text" id="name" name="name" placeholder="Full Name" />
+            <br/><br/>
+            </td>
+            </tr>
+            <tr>
+                <td>
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" placeholder="Age" />
+            <br/><br/>
+            </td>
+            </tr>
+            <tr>
+                <td>
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="number" name="phone"
+                   pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}-[0-9]{2}"
+                   placeholder="123-45-678-90"
+                   title="Format: 123-45-678-90" />
+            <br/><br/>
+            </td>
+            </tr>
+            <tr>
+                <td>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Email" />
+            <br/><br/>
+            </td>
+            </tr>
+            <tr>
+                <td>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Password" />
+            <br/><br/>
+            </td>
+            </tr>
+            <tr>
+                <td>
+            <label>Gender:</label>
+            <input type="radio" id="gender" name="gender" value="male" />
+            <label for="male">Male</label>
+            <input type="radio" id="gender" name="gender" value="female" />
+            <label for="female">Female</label>
+            <br/><br/>
+            </td>
+            </tr>
+            </table>
+
+            <button onclick="printLog()">Submit</button>
+        </form>
+    </center>
+</body>
+</html>
